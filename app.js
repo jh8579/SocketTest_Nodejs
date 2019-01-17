@@ -2,7 +2,7 @@
 var io = require('socket.io').listen(3000);
 
 // connection이 발생할 때 핸들러를 실행한다.
-io.sockets.on('connection', function (socket) {  
+io.on('connection', function (socket) {  
     // 클라이언트로 news 이벤트를 보낸다.
     io.emit('news', { hello: 'world' });
     console.log("Connected");
